@@ -5,12 +5,16 @@ public class Item {
 	private int sellIn;
 	private int quality;
 
+	public Item() {
+		
+	}
+	
 	public Item(String name, int sellIn, int quality) {
 		this.name = name;
 		this.sellIn = sellIn;
 		this.quality = quality;
 	}
-
+	
 	/* Generated getter and setter code */
 	public String getName() {
 		return name;

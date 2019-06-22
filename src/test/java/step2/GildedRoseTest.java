@@ -2,15 +2,13 @@ package step2;
 import static org.junit.Assert.assertEquals;
 
 import java.util.Arrays;
-import java.util.List;
 
 import org.junit.Test;
 
 public class GildedRoseTest {
 
-	Item item = new Item("더미", 0, 0);
-	List<Item> items = Arrays.asList(item);
-	GildedRose gildedRose = new GildedRose(items);
+	Item item = new Item();
+	GildedRose gildedRose = new GildedRose(Arrays.asList(item));
 	
 	@Test
 	public void 일반_아이템은_기본적으로_품질이_1씩_떨어집니다() {

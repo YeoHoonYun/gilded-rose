@@ -70,12 +70,12 @@ public class GildedRose {
 	}
 
 	private void decreaseQuality(Item item, int amount) {
-		int newQuality = Math.max(0, item.quality - amount);
+		int newQuality = Math.max(0, item.getQuality() - amount);
 		item.setQuality(newQuality);
 	}
 
 	private void increaseQuality(Item item, int amount) {
-		int newQuality = Math.min(50, item.quality + amount);
+		int newQuality = Math.min(50, item.getQuality() + amount);
 		item.setQuality(newQuality);
 	}
 

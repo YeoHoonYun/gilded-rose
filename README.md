@@ -1,4 +1,29 @@
-# Gilded Rose Requirement Specification
+# Gilded Rose Kata
+
+Project source is split by step-packages for education purpose.
+
+- original : Original source from [wouterla](https://github.com/wouterla/GildedRose). Item class has changed a little bit.
+- step1 : Coverage 100% test cases.
+- step2 : Refactor only GildedRose.java. Simplify conditional statement, Extract methods and constants.
+- step3 : Refactor into a Proxy, State, Simple Factory pattern. 
+
+## How to Import
+
+This project has a eclipse project file. 
+Import it manually when you want to use other IDE, code editor 
+
+1. eclipse package(project) explorer - right click
+1. Import - Existing Project into workspace
+1. Select root directory - browse - select the clone directory
+	> If you a download zip file, select archive file
+1. next, next, next, done!
+
+### Eclipse project properties
+- Specify a jre10
+- Specify a junit4 with embed in eclipse
+- Project encoding is UTF-8
+
+## Gilded Rose Requirement Specification
 
 Gilded Rose 팀에 오신 것을 환영합니다. 여기는 Allison이라는 친절한 주인이 운영하고 있는 작은 여관이며, 도시의 중심지에 위치하고 있습니다. 우리는 또한 최고급 물건을 사거나 팔고 있습니다.
 

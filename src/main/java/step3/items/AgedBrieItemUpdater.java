@@ -1,17 +1,17 @@
 package step3.items;
 
-import step3.GildedRoseItem;
+import step3.GildedRoseItemUpdater;
 import step3.Item;
 
-public class AgedBrieItem extends GildedRoseItem{
+public class AgedBrieItemUpdater extends GildedRoseItemUpdater{
 
-	public AgedBrieItem(Item item) {
+	public AgedBrieItemUpdater(Item item) {
 		super(item);
 	}
 
 	@Override
 	protected void updateQuality() {
-		if (getSellIn() > 0) {
+		if (item.getSellIn() > 0) {
 			increaseQuality(1);
 		} else {
 			increaseQuality(2);

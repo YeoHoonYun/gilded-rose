@@ -12,9 +12,9 @@ public class GildedRose {
 
 	public void updateQuality() {
 		for (Item item : items) {
-			GildedRoseItem grItem = GildedRoseItemFactory.createFrom(item);
-			grItem.updateQuality();
-			grItem.updateSellIn();
+			GildedRoseItemUpdater updater = GildedRoseItemFactory.createFrom(item);
+			updater.updateQuality();
+			updater.updateSellIn();
 		}
 	}
 }

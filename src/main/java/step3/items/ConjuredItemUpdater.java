@@ -1,11 +1,11 @@
 package step3.items;
 
-import step3.GildedRoseItem;
+import step3.GildedRoseItemUpdater;
 import step3.Item;
 
-public class ConjuredItem extends GildedRoseItem{
+public class ConjuredItemUpdater extends GildedRoseItemUpdater{
 
-	public ConjuredItem(Item item) {
+	public ConjuredItemUpdater(Item item) {
 		super(item);
 	}
 
@@ -16,7 +16,7 @@ public class ConjuredItem extends GildedRoseItem{
 
 	@Override
 	protected void updateQuality() {
-		if(getSellIn() > 0) {
+		if(item.getSellIn() > 0) {
 			decreaseQuality(2);
 		} else {
 			decreaseQuality(4);

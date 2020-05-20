@@ -1,10 +1,10 @@
 package step3;
 
-import step3.items.AgedBrieItem;
-import step3.items.BackstageItem;
-import step3.items.ConjuredItem;
-import step3.items.NormalItem;
-import step3.items.SulfurasItem;
+import step3.items.AgedBrieItemUpdater;
+import step3.items.BackstageItemUpdater;
+import step3.items.ConjuredItemUpdater;
+import step3.items.NormalItemUpdater;
+import step3.items.SulfurasItemUpdater;
 
 public class GildedRoseItemFactory {
 	public static final String AGED_BRIE = "Aged Brie";
@@ -12,18 +12,18 @@ public class GildedRoseItemFactory {
 	public static final String BACKSTAGE = "Backstage passes to a TAFKAL80ETC concert";
 	public static final String CONJURED = "Conjured";
 	
-	public static GildedRoseItem createFrom(Item item) {
+	public static GildedRoseItemUpdater createFrom(Item item) {
 		String name = item.getName();
 		if (SULFURAS.equals(name)) {
-			return new SulfurasItem(item);
+			return new SulfurasItemUpdater(item);
 		} else if (AGED_BRIE.equals(name)) {
-			return new AgedBrieItem(item);
+			return new AgedBrieItemUpdater(item);
 		} else if (BACKSTAGE.equals(name)) {
-			return new BackstageItem(item);
+			return new BackstageItemUpdater(item);
 		} else if (CONJURED.equals(name)) {
-			return new ConjuredItem(item);
+			return new ConjuredItemUpdater(item);
 		} else {
-			return new NormalItem(item);
+			return new NormalItemUpdater(item);
 		}
 	}
 }

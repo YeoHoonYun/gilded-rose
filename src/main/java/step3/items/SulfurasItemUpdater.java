@@ -1,11 +1,11 @@
 package step3.items;
 
-import step3.GildedRoseItem;
+import step3.GildedRoseItemUpdater;
 import step3.Item;
 
-public class SulfurasItem extends GildedRoseItem{
+public class SulfurasItemUpdater extends GildedRoseItemUpdater{
 
-	public SulfurasItem(Item item) {
+	public SulfurasItemUpdater(Item item) {
 		super(item);
 	}
 

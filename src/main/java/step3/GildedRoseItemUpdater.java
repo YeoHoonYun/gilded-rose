@@ -1,30 +1,20 @@
 package step3;
 
-public abstract class GildedRoseItemUpdater{
+import step3.Item;
 
-	private static final int MIN_QUALITY = 0;
-	private static final int MAX_QUALITY = 50;
+public abstract class GildedRoseItemUpdater {
 
-	protected Item item;
-	
-	public GildedRoseItemUpdater(Item item) {
-		this.item = item;
-	}
-
-	protected void decreaseQuality(int amount) {
-		int newQuality = Math.max(MIN_QUALITY, item.getQuality() - amount);
+	protected void increaseQuality(Item item, int amount) {
+		int newQuality = Math.min(50, item.getQuality() + amount);
 		item.setQuality(newQuality);
 	}
 
-	protected void increaseQuality(int amount) {
-		int newQuality = Math.min(MAX_QUALITY, item.getQuality() + amount);
+	protected void decreaseQuality(Item item, int amount) {
+		int newQuality = Math.max(0, item.getQuality() - amount);
 		item.setQuality(newQuality);
 	}
-	
-	protected void decreaseSellIn() {
-		item.setSellIn(item.getSellIn() - 1);
-	}
 
-	protected abstract void updateSellIn();
-	protected abstract void updateQuality();
+	protected abstract void updateSellIn(Item item);
+	protected abstract void updateQuality(Item item);
+
 }

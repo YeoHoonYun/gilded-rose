@@ -5,7 +5,7 @@ Project source is split by step-packages for education purpose.
 - original : Original source from [wouterla](https://github.com/wouterla/GildedRose). Item class has changed a little bit.
 - step1 : Coverage 100% test cases.
 - step2 : Refactor only GildedRose.java. Simplify conditional statement, Extract methods and constants.
-- step3 : Refactor into a Proxy, State, Simple Factory pattern. 
+- step3 : Refactor into a State(Strategy), Flyweight Factory pattern. 
 
 ## How to Import
 

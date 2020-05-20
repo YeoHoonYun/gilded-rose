@@ -22,13 +22,12 @@ public class GildedRose {
 	}
 
 	private void updateQuality(Item item) {
-		if (GildedRose.SULFURAS.equals(item.getName()))
-			return;
-
 		if (GildedRose.AGED_BRIE.equals(item.getName())) {
 			updateQualityForAgedBrie(item);
 		} else if (GildedRose.BACKSTAGE.equals(item.getName())) {
 			updateQualityForBackstage(item);
+		} else if(GildedRose.SULFURAS.equals(item.getName())){
+			
 		} else {
 			updateQualityForNormal(item);
 		}

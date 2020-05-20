@@ -23,41 +23,29 @@ public class GildedRose {
 
 	private void updateQuality(Item item) {
 		if (GildedRose.AGED_BRIE.equals(item.getName())) {
-			updateQualityForAgedBrie(item);
+			if (item.getSellIn() > 0) {
+				increaseQuality(item, 1);
+			} else {
+				increaseQuality(item, 2);
+			}
 		} else if (GildedRose.BACKSTAGE.equals(item.getName())) {
-			updateQualityForBackstage(item);
+			if(item.getSellIn() > 10) {
+				increaseQuality(item, 1);
+			} else if (item.getSellIn() > 5) {
+				increaseQuality(item, 2);
+			} else if (item.getSellIn() > 0) {
+				increaseQuality(item, 3);
+			} else {
+				item.setQuality(0);
+			}
 		} else if(GildedRose.SULFURAS.equals(item.getName())){
 			
 		} else {
-			updateQualityForNormal(item);
-		}
-	}
-
-	private void updateQualityForAgedBrie(Item item) {
-		if (item.getSellIn() > 0) {
-			increaseQuality(item, 1);
-		} else {
-			increaseQuality(item, 2);
-		}
-	}
-	
-	private void updateQualityForBackstage(Item item) {
-		if(item.getSellIn() > 10) {
-			increaseQuality(item, 1);
-		} else if (item.getSellIn() > 5) {
-			increaseQuality(item, 2);
-		} else if (item.getSellIn() > 0) {
-			increaseQuality(item, 3);
-		} else {
-			item.setQuality(0);
-		}
-	}
-	
-	private void updateQualityForNormal(Item item) {
-		if (item.getSellIn() > 0) {
-			decreaseQuality(item, 1);
-		} else {
-			decreaseQuality(item, 2);
+			if (item.getSellIn() > 0) {
+				decreaseQuality(item, 1);
+			} else {
+				decreaseQuality(item, 2);
+			}
 		}
 	}
 

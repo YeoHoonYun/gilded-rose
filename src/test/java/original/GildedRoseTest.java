@@ -9,7 +9,7 @@ public class GildedRoseTest {
 
 	@Test
 	public void gilded_rose_test() {
-		GildedRose gildedRose = new GildedRose(new ArrayList<>());
+		GildedRose gildedRose = new GildedRose(new ArrayList<Item>());
 		assertNotNull(gildedRose);
 	}
 
